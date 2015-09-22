@@ -22,7 +22,6 @@
 //Local Functions
 int SendCmd(String Cmd, String Exp, int del); 
 void connecttoWifi(void);
-void serialTx(String Cmd);
 int uploadAlltoThingspeak(String rtctag,String class1,String class2,String class3,String outside);
 
 SoftwareSerial WifiInterface(10, 11); // RX, TX
@@ -117,28 +116,7 @@ void loop() {
             break;
     }
 }
-//////////////////////////////////////////////////////
-// Send Command to ESP8266
-// Notes:
-// 1. Transmit FIFO 64 bytes (Max send length)
-// 2. Cannot send all sensors to ThingSpeak at same time
-// 3. Send 1 char at time commented out below, not working
-//////////////////////////////////////////////////////
-void serialTx(String Cmd) {
-   /*
-   int i;
-   for(i=0;i<(Cmd.length()-2);i++) {
-       WifiInterface.print(Cmd.charAt(i));
-       Serial.print(Cmd.charAt(i));
-       delay(10);
-   }
-   delay(100);
-   //
-   WifiInterface.print("\r\n"); 
-   Serial.print("\r\n"); 
-   */
-   WifiInterface.println(Cmd); 
-}
+
 //////////////////////////////////////////////////////
 // SendCmd() - Send string to ESP8266
 // Cmd       - String to send
@@ -149,8 +127,7 @@ void serialTx(String Cmd) {
 int SendCmd(String Cmd, String Exp, int del) {
     String rcv="";
     int ms=0;
-    serialTx(Cmd);
-    //WifiInterface.println(Cmd); 
+    WifiInterface.println(Cmd); 
     delay(500);
     while ((WifiInterface.available()<1)&&(ms<del)) {
         delay(100);
