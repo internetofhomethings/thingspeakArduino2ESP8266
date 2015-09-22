@@ -35,7 +35,9 @@ Note: The Arduino core and Software Serial library defaults to a 64 byte buffer
 for transmit and receive. In order to complete the ThingSpeak update in 1 
 transaction, the buffer size was increased to 256 bytes. This change requires:
 
-1. Change the <arduino base folder>\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial.h file.
+<h4>When using a software serial port</h4>
+
+Change the <arduino base folder>\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial.h file.
 
 Change:
 
@@ -45,7 +47,9 @@ To:
 
 __#define _SS_MAX_RX_BUFF 256 // RX buffer size
 
-2. Change the <arduino base folder>\hardware\arduino\avr\cores\arduino\HardwareSerial.h file.
+<h4>When using a hardware serial port</h4>
+
+Change the <arduino base folder>\hardware\arduino\avr\cores\arduino\HardwareSerial.h file.
 
 From:
 
