@@ -41,20 +41,20 @@ transaction, the buffer size was increased to 256 bytes. This change requires:
 
 Change:
 
->> #define _SS_MAX_RX_BUFF 64 // RX buffer size
+__#define _SS_MAX_RX_BUFF 64 // RX buffer size
 
 To:
 
->> #define _SS_MAX_RX_BUFF 256 // RX buffer size
+__#define _SS_MAX_RX_BUFF 256 // RX buffer size
 
 2. Change the <arduino base folder>\hardware\arduino\avr\cores\arduino\HardwareSerial.h file.
 
 From:
 
->> #define SERIAL_TX_BUFFER_SIZE 64
->> #define SERIAL_RX_BUFFER_SIZE 64
+__#define SERIAL_TX_BUFFER_SIZE 64
+__#define SERIAL_RX_BUFFER_SIZE 64
 
 To:
 
->> #define SERIAL_TX_BUFFER_SIZE 256
->> #define SERIAL_RX_BUFFER_SIZE 256
+__#define SERIAL_TX_BUFFER_SIZE 256
+__#define SERIAL_RX_BUFFER_SIZE 256
