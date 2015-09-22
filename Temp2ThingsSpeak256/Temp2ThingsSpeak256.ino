@@ -16,10 +16,8 @@
 #define SERBAUD 115200
 
 #define APIKEY    "ZIIGPGZ3WSLHAZ50"    //ThingSpeak API WRITE KEY
-//#define SSID      "WIFISSID"            //WIFI SSID
-//#define PASSWORD  "WIFIPASSWORD"        //WIFI Password
-#define SSID      "dsa"            //WIFI SSID
-#define PASSWORD  "1957090922"        //WIFI Password
+#define SSID      "WIFISSID"            //WIFI SSID
+#define PASSWORD  "WIFIPASSWORD"        //WIFI Password
 
 //Local Functions
 int SendCmd(String Cmd, String Exp, int del); 
