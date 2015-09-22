@@ -51,10 +51,10 @@ __#define _SS_MAX_RX_BUFF 256 // RX buffer size
 
 From:
 
-__#define SERIAL_TX_BUFFER_SIZE 64
+__#define SERIAL_TX_BUFFER_SIZE 64<br>
 __#define SERIAL_RX_BUFFER_SIZE 64
 
 To:
 
-__#define SERIAL_TX_BUFFER_SIZE 256
+__#define SERIAL_TX_BUFFER_SIZE 256<br>
 __#define SERIAL_RX_BUFFER_SIZE 256
