@@ -20,10 +20,8 @@ Compile and run the sketch "Temp2ThingsSpeak256.ino" to run this demo applicatio
 with the ESP8266 running. Before running, the WIFI parameters in the sketch need
 to be updated with your local WIFI settings:
 
-__#define APIKEY    "ZIIGPGZ3WSLHAZ50"    //ThingSpeak API WRITE KEY
-
-__#define SSID      "WIFISSID"            //WIFI SSID
-
+__#define APIKEY    "ZIIGPGZ3WSLHAZ50"    //ThingSpeak API WRITE KEY<br>
+__#define SSID      "WIFISSID"            //WIFI SSID<br>
 __#define PASSWORD  "WIFIPASSWORD"        //WIFI Password
 
 The APIKEY provided is public for this demo application. However, your
