@@ -168,8 +168,8 @@ void connecttoWifi(void) {
 // uploadAlltoThingspeak()
 // rtctag    - field1 String value of timetag
 // class1    - field2 int value of classroom 1 temperature (C)
-// class1    - field3 int value of classroom 2 temperature (C)
-// class1    - field4 int value of classroom 3 temperature (C)
+// class2    - field3 int value of classroom 2 temperature (C)
+// class3    - field4 int value of classroom 3 temperature (C)
 // outside   - field5 int value of outside temperature (C)
 // return    - "-1" if failed, 0 or greater if success
 //////////////////////////////////////////////////////////////////
