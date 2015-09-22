@@ -75,12 +75,10 @@ void loop() {
         case 4:  // Read Temperature Sensor 3: Classroom 3
         case 5:  // Read Temperature Sensor 4: Outside
             //Read DS18B20 Temperature Sensor 1,2,3 or 4
-            if(temp1>27) temp1 = 14;  //A fake value for temperature for test purposes
-            //t[ifld-1] = temp1;            //Save Temperature Reading
-            dtostrf(temp1,4,1,cval);            //Save Temperature Reading
-            t[ifld-1] = String(cval);
-            //dtostrf(floatVar, minStringWidthIncDecimalPoint, numVarsAfterDecimal, charBuf);
-            temp1 += 1.1;
+            if(temp1>27) temp1 = 14;        //Boundary of fake value for temperature for test purposes
+            dtostrf(temp1,4,1,cval);        //Convert float to char of Temperature Reading
+            t[ifld-1] = String(cval);       //Convert char to String
+            temp1 += 1.1;                   //A fake value for temperature for test purposes
             break;
         case 6:
             //Save latest Temperature readings  to SD Card
@@ -107,7 +105,7 @@ void loop() {
             //Save All temperature readings to ThingSpeak
             itry=0;
             while( (uploadAlltoThingspeak(timetag,t[1],t[2],t[3],t[4])<1)&&(itry++<3) ) { //Up to 3 tries allowed if save fails 
-                connecttoWifi(); //Reconnect WIFI if lost...Why? Because last save oo ThingSpeak failed
+                connecttoWifi(); //Reconnect WIFI if lost...Why? Because last save on ThingSpeak failed
             }
             break;
         case 9:
