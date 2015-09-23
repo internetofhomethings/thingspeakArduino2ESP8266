@@ -1,5 +1,5 @@
 
-<h2><strong>Read DS18B20 Temp Sensors and log to ThingSpeak</strong></h2>
+<h2><strong>Read DS18B20 Temperature Sensors and log to ThingSpeak</strong></h2>
 
 The Arduino sketch is dependant on an ESP8266-12 interfacing with
 the Arduino as follows:
